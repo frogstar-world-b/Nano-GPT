@@ -4,7 +4,7 @@ We break the [video tutorial by Andrej Karpathy](https://youtu.be/kCc8FmEb1nY?si
 Using PyTorch, we begin by coding a single layer NN bigram model that takes as input a single token and generates the next token. Then, we progress in complexity all the way to a decoder having 6 Transformer layers. The final model can take a sequence as input and generates the next token.
 
 
-## Key concepts:
+## Key concepts
 1. **Self-Attention Mechanism**:
    - The core innovation of the Transformer is the self-attention mechanism. It allows the model to weigh the importance of different parts of the input sequence when processing a particular token. This mechanism replaces the need for fixed-length context windows or recurrence. Because we construct a decoder, only previous parts of the sequence (before the current token) are considered by the self-attention mechanism.
 
@@ -23,5 +23,5 @@ Using PyTorch, we begin by coding a single layer NN bigram model that takes as i
 5. **Residual Connections and Layer Normalization**:
    - To facilitate training deep networks, residual connections are used, and layer normalization is applied after each sub-layer.
 
-
-
+## Technical Note
+The scripts were run on a MacBook Pro M2 Max, so the device is set to "mps" to take advantage of the GPU. The scripts include a code snippet to accommodate "cuda" or "cpu". 
