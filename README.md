@@ -1,7 +1,7 @@
 # Nano-GPT
 We break the [video tutorial by Andrej Karpathy](https://youtu.be/kCc8FmEb1nY?si=5B0xvNJ2YYKVRX1u) on building a Generative Pre-trained Transformer (GPT) from scratch into 10 sections. The tutorial follows ideas covered in [Attention is All You Need](https://arxiv.org/abs/1706.03762)
 
-Using PyTorch, we begin by coding a single layer NN bigram model that takes as input a single token and generates the next token. Then, we progress in complexity all the way to a decoder having 6 transformer layers. The final model can take a sequence as input and generates the next token.
+Using PyTorch, we begin by coding a single layer NN bigram model that takes as input a single token and generates the next token. Then, we progress in complexity all the way to a decoder having 6 Transformer layers. The final model can take a sequence as input and generates the next token.
 
 
 ## Key concepts:
