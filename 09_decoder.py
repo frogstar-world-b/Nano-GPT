@@ -249,13 +249,17 @@ for iter in range(max_iters):
     loss.backward()
     optimizer.step()
 
-# generate from the model
+# generate from the model using a single  kickoff token ("\n")
 context = torch.zeros((1, 1), dtype=torch.long, device=device)
-#print(decode(m.generate(context, max_new_tokens=500)[0].tolist()), '\n')
-
 open('out2k.txt', 'w').write(
     decode(model.generate(context, max_new_tokens=2000)[0].tolist()))
 print('All Done!!!')
+
+# generate from the model using a kickoff sequence
+# kickoff_text = "First Citizen:\nLet us be brave, and we'll be rewarded with victory.\n"
+# kickoff_context = torch.tensor(encode(kickoff_text),
+#                                device=device).view(1, len(kickoff_text))
+# print(decode(model.generate(kickoff_context, max_new_tokens=500)[0].tolist()), '\n')
 
 
 """
